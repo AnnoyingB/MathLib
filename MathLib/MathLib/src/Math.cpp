@@ -1,5 +1,6 @@
 #include "Math.h"
 
+
 float Math::Add(float num1, float num2) {
 	return num1 + num2;
 }
@@ -17,19 +18,20 @@ float Math::Multiply(float num1, float num2) {
 }
 
 bool Math::IsPrime(int num1) {
-    int flag;
-    int m = num1 / 2;
-    for (int i = 2; i <= m; i++)
-    {
-        if (num1 % i == 0)
-        {
-            return false;
-            flag = 1;
+    if (num1 == 0 || num1 == 1)
+        return 0;
+
+    else if (num1 == 2)
+        return 1;
+
+    int increment = 2;
+    while (increment != num1) {
+        if (num1 % increment == 0) {
+            return 0;
         }
+        increment++;
     }
-    if (flag == 0)
-        return true;
-    return 0;
+    return 1;
 }
 
 float Math::Sqrt(float num1) {
