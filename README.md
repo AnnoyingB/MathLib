@@ -1,7 +1,7 @@
 # MathLib
 A library for doing quick math!
 
-```
+```c++
 std::cout << Math::Prime(3) << std::endl;
 ```
 
@@ -9,7 +9,7 @@ Console:
 True
 
 
-```
+```c++
 std::cout << Math::Prime(4) << std::endl;
 ```
 
